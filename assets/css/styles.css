@@ -85,9 +85,6 @@ header nav ul {
   gap: 30px;
 }
 header nav ul li {
-  color: #f4f4f4;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 1rem;
   cursor: pointer;
 }
 header nav ul li margin {
@@ -95,6 +92,11 @@ header nav ul li margin {
 }
 header nav ul li::marker {
   content: "🟪";
+}
+header nav ul li a {
+  color: #f4f4f4;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
 }
 header nav img {
   width: 40px;
@@ -105,11 +107,22 @@ header nav img {
   background-color: #640fc5;
 }
 .hero .heroConts {
+  animation: "fade-top" 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+@keyframes fade-top {
+  0% {
+    opacity: 0;
+    transform: translateY("-400px");
+  }
+  100% {
+    opacity: 1;
+    transform: translateY("0");
+  }
 }
 .hero .heroConts .content {
   display: flex;
@@ -131,7 +144,7 @@ header nav img {
   justify-content: start;
   gap: 20px;
 }
-.hero .heroConts img {
+.hero .heroConts div img {
   width: 100%;
   border-radius: 20px;
   box-shadow: 2px 5px 20px rgba(45, 0, 108, 0.478);

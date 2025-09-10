@@ -4,6 +4,7 @@
 @import "./partial/colors";
 @import "./partial/buttons";
 @import "./partial/mixins";
+@import "./partial/animation";
 
 body {
   background-color: $bg-prime-dark;
@@ -28,15 +29,17 @@ header {
       display: flex;
       gap: 30px;
       li {
-        color: $text-prime;
-        font-family: $family;
-        font-size: $fs-2;
         cursor: pointer;
         margin {
           left: 20px;
         }
         &::marker {
           content: "🟪";
+        }
+        a {
+          color: $text-prime;
+          font-family: $family;
+          font-size: $fs-2;
         }
       }
     }
@@ -50,6 +53,8 @@ header {
   display: flex;
   background-color: $bg-prime;
   .heroConts {
+    @include keyframes-fade("fade-top", "-400px", "0");
+    @include fade("fade-top", 3s);
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -79,7 +84,7 @@ header {
         gap: 20px;
       }
     }
-    img {
+    div img {
       width: 100%;
       @include floating();
     }
