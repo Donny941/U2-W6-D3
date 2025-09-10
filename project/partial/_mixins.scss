@@ -1,3 +1,13 @@
-@mixin title($size) {
+@mixin title-big($size) {
   font-size: calc($size * 2);
+}
+
+@mixin floating(
+  $radius: 20px,
+  $shadow: 2px 5px 20px rgba(45, 0, 108, 0.478),
+  $border: 4px
+) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border solid $bg-prime-dark;
 }

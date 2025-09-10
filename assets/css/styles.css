@@ -135,6 +135,7 @@ header nav img {
   width: 100%;
   border-radius: 20px;
   box-shadow: 2px 5px 20px rgba(45, 0, 108, 0.478);
+  border: 4px solid rgb(51.8867924528, 7.7830188679, 102.2169811321);
 }
 
 .about {
@@ -155,6 +156,7 @@ header nav img {
   aspect-ratio: 1/1;
   border-radius: 20px;
   box-shadow: 2px 5px 20px rgba(45, 0, 108, 0.478);
+  border: none solid rgb(51.8867924528, 7.7830188679, 102.2169811321);
 }
 
 footer {
