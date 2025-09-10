@@ -14,12 +14,3 @@
 @mixin fade($name, $duration) {
   animation: $name $duration cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@mixin floating(
-  $radius: 20px,
-  $shadow: 2px 5px 20px rgba(45, 0, 108, 0.478),
-  $border: 4px
-) {
-  border-radius: $radius;
-  box-shadow: $shadow;
-  border: $border solid $bg-prime-dark;
-}
