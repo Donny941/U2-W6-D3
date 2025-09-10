@@ -1,0 +1,3 @@
+@mixin title($size) {
+  font-size: calc($size * 2);
+}

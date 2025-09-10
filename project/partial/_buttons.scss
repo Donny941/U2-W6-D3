@@ -1,0 +1,25 @@
+$coloredButton: (
+  blueButton: $color-blue,
+  orangeButton: $color-orange,
+  greenButton: $color-green,
+);
+
+@each $key, $color in $coloredButton {
+  .button-#{$key} {
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    background-color: $color;
+    font-family: $family;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: adjust-color($color, $lightness: -30%);
+    border: 2px solid adjust-color($color, $lightness: -20%);
+    box-shadow: 0 2px 12px adjust-color($color, $lightness: -30%, $alpha: 0.8);
+    transition: all 0.3s ease;
+    &:hover {
+      scale: 1.05;
+      box-shadow: 0 2px 12px adjust-color($color, $lightness: 10%, $alpha: 1);
+    }
+  }
+}

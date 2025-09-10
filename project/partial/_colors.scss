@@ -1,0 +1,9 @@
+$bg-prime: #640fc5;
+$bg-prime-dark: adjust-color($bg-prime, $lightness: -20%);
+$bg-second: adjust-color($bg-prime, $saturation: -30%);
+$color-blue: #0e6cff;
+$color-orange: #ff8700;
+$color-green: #4caf50;
+$text-prime: #f4f4f4;
+$text-black: black;
+$text-white: white;
